@@ -1,0 +1,22 @@
+
+.lang-dropdown .v-list-item {
+    min-height: 36px;
+}
+
+.v-menu__content {
+    transform: translateY(15px);
+    box-shadow: 0px 4px 10px rgba(78, 78, 78, 0.25) !important;
+    border-radius: 10px !important;
+}
+
+.v-tabs-slider-wrapper {
+    display: none;
+}
+
+.v-text-field--outlined {
+    border-radius: 0 !important;
+}
+
+img {
+    max-width: 100%;
+}

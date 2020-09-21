@@ -1,0 +1,299 @@
+
+@import './fonts.css';
+@import './helper-classes.css';
+@import './rebuild.css';
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --regular: "K2D-Regular";
+    --semiBold: "K2D-SemiBold";
+    --bold: "K2D-Bold";
+    --dark: #3f3f3f;
+    --green: #A5D9A1;
+    --dark-green: #1F9389;
+    --grey: #6C8A9B;
+    --pink: #FFA097;
+    --red: #FF6151;
+    --border-color: #E3E3E3;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--regular);
+}
+
+.auth-header {
+    min-height: 100px;
+    background: #fff;
+    box-shadow: 0px 4px 20px rgba(166, 166, 166, 0.25);
+}
+
+.header {
+    z-index: 99;
+}
+
+.app-logo span {
+    font-family: "Roboto";
+    font-size: 41px;
+    font-weight: 300;
+    color: var(--grey);
+}
+
+.header-lang {
+    right: 30px;
+}
+
+.lang-dropdown {
+    min-width: 142px;
+}
+
+.dropdown-items span {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--dark);
+}
+
+.layout-route {
+    min-height: 100vh;
+    padding-top: 145px;
+}
+
+.app-login {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    border: 1px solid var(--border-color);
+}
+
+.login-tabs .tab-items {
+    width: 50%;
+    background: rgb(108 138 155 / 0.06);
+    color: #000 !important;
+}
+
+.tab-items.v-tab--active {
+    background: #fff;
+}
+
+.tab-title {
+    font-size: 39px;
+    line-height: 39px;
+}
+
+.tab-content {
+    padding: 0 calc(12px + 2.6041666666666665vw) calc(6px + 1.0416666666666667vw) calc(12px + 2.6041666666666665vw);
+}
+
+.ophan-button-1 button {
+    font-size: 30px !important;
+    height: 62px !important;
+    line-height: 39px !important;
+    letter-spacing: 1px !important;
+    border-radius: 9px !important;
+}
+
+.forget-password {
+    font-size: 21px;
+    line-height: 27px;
+}
+
+.error-text {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.condition-text {
+    font-size: 21px;
+    line-height: 27px;
+}
+
+.app-navigation,
+.app-drawer {
+    min-height: 100vh;
+}
+
+.app-drawer,
+.header {
+    position: sticky;
+    top: 0;
+}
+
+.app-main {
+    background: #F7F9FC;
+    flex: 1;
+}
+
+.app-drawer .v-navigation-drawer__content {
+    height: 100vh;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-content {
+    flex: 1;
+}
+
+.drawer-logo {
+    margin: 30px;
+}
+
+.drawer-anchor.v-list-item {
+    padding: 17px 15px;
+}
+
+.app-header {
+    padding: 35px 20px 10px 35px;
+    background: #F7F9FC;
+}
+
+.header-search {
+    max-width: 572px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 31px;
+}
+
+.header-search input {
+    outline: none;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.header-search img {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-search span {
+    left: 0;
+    max-width: 362px;
+    top: 0;
+    z-index: 1;
+    color: #B2B2B2;
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 31.64px;
+}
+
+.notification-dropdown {
+    width: 60px;
+    height: 60px;
+}
+
+.header-tools {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 10px;
+}
+
+.auth-dropdown {
+    min-width: 83px;
+    width: 100%;
+    height: 60px;
+}
+
+.app-home {
+    padding: 0 20px 0 35px;
+}
+
+.card-basic {
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 13px 19px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card {
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px 10px 15px;
+}
+
+/***************  MEDIA  ************************/
+
+@media (max-width: 650px) {
+    .header {
+        min-height: 70px;
+    }
+
+    .app-logo span {
+        font-size: 30px;
+        margin-left: 10px !important;
+    }
+
+    .header-lang {
+        right: 10px;
+    }
+
+    .header-lang img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .layout-route {
+        padding-top: 115px;
+    }
+
+    .app-login {
+        margin: 0 20px 30px;
+    }
+
+    .tab-title {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .ophan-button-1 button {
+        height: 45px !important;
+        font-size: 16px !important;
+        line-height: 21px !important;
+    }
+
+    .forget-password {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .error-text {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .condition-text {
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    .app-logo img {
+        max-width: 30px;
+    }
+
+    .login-tabs .tab-items {
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .tab-content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .login-tabs .tab-items {
+        font-size: 12px;
+    }
+}
