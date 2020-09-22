@@ -5,6 +5,11 @@
 }
 
 @font-face {
+    font-family: "K2D-Medium";
+    src: url('../fonts/K2D-Medium.ttf');
+}
+
+@font-face {
     font-family: "K2D-SemiBold";
     src: url('../fonts/K2D-SemiBold.ttf');
 }

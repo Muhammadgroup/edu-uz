@@ -7,6 +7,10 @@
     font-family: var(--semiBold);
 }
 
+.font-500 {
+    font-family: var(--medium);
+}
+
 .font-400 {
     font-family: var(--regular);
 }
@@ -91,4 +95,25 @@
     font-size: 14px;
     line-height: 18px;
     color: var(--dark);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+    border-radius: 14px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #a5a5a5;
 }

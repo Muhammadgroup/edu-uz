@@ -17,6 +17,20 @@
     border-radius: 0 !important;
 }
 
+.custom-alert {
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+}
+
+.read-more-notification button {
+    height: 46px !important;
+}
+
+.read-more-notification span {
+    font-size: 13px !important;
+    letter-spacing: 0.5px !important;
+}
+
 img {
     max-width: 100%;
 }

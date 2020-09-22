@@ -14,6 +14,7 @@
 
 :root {
     --regular: "K2D-Regular";
+    --medium: "K2D-Medium";
     --semiBold: "K2D-SemiBold";
     --bold: "K2D-Bold";
     --dark: #3f3f3f;
@@ -145,8 +146,22 @@ body {
     margin: 30px;
 }
 
+.router-link-active .drawer-anchor {
+    background: var(--pink) !important;
+}
+
+.router-link-active .drawer-anchor .v-list-item__title {
+    color: #fff;
+}
+
 .drawer-anchor.v-list-item {
-    padding: 17px 15px;
+    margin: 17px 15px;
+    border-radius: 10px !important;
+    padding: 8px 20px;
+}
+
+.drawer-anchor.v-list-item--link:before {
+    border-radius: 10px;
 }
 
 .app-header {
@@ -221,6 +236,38 @@ body {
     background: #FFFFFF;
     border-radius: 10px;
     padding: 20px 10px 15px;
+}
+
+.notification-dropdown-list {
+    min-width: 426px;
+}
+
+.alert-title {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.alert--text p {
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--dark);
+    margin: 0 !important;
+}
+
+.alert-date {
+    justify-content: flex-end;
+}
+
+.alert-date span {
+    font-size: 12px;
+}
+
+.theme--light.v-list-item:not(.v-list-item--active):not(.v-list-item--disabled) .drawer-anchor:hover {
+    color: transparent !important;
+}
+
+.dropdown--list:hover {
+    background: #eee;
 }
 
 /***************  MEDIA  ************************/

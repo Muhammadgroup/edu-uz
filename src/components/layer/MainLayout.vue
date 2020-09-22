@@ -3,11 +3,11 @@
     <div class="app-navigation d-flex">
       <v-navigation-drawer
         class="app-drawer"
+        permanent
         floating
         miniVariantWidth="118"
         v-model="drawer"
         :mini-variant.sync="mini"
-        permanent
         expand-on-hover
       >
         <div class="drawer-top">
@@ -18,7 +18,7 @@
               </v-list-item-icon>
 
               <v-list-item-content>
-                <v-list-item-title class="brand-text">edu</v-list-item-title>
+                <v-list-item-title class="brand-text color-grey">edu</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
           </v-list-item>
@@ -26,15 +26,17 @@
 
         <div class="drawer-content">
           <v-list dense>
-            <v-list-item link class="drawer-anchor">
-              <v-list-item-icon>
-                <v-img max-height="24" max-width="24" src="@/assets/img/icons/icon-6.svg"></v-img>
-              </v-list-item-icon>
+            <router-link to="/" class="d-block text-decoration-none">
+              <v-list-item link class="drawer-anchor">
+                <v-list-item-icon>
+                  <v-img max-height="24" max-width="24" src="@/assets/img/icons/icon-6.svg"></v-img>
+                </v-list-item-icon>
 
-              <v-list-item-content>
-                <v-list-item-title>Asosiy sahifa</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
+                <v-list-item-content>
+                  <v-list-item-title>Asosiy sahifa</v-list-item-title>
+                </v-list-item-content>
+              </v-list-item>
+            </router-link>
 
             <v-list-item link class="drawer-anchor">
               <v-list-item-icon>
@@ -102,7 +104,7 @@
           </div>
 
           <div class="header-toolbar d-flex ml-auto">
-            <v-menu offset-y>
+            <v-menu offset-y :close-on-content-click="closeOnContentClick">
               <template v-slot:activator="{ on, attrs }">
                 <div
                   class="header-tools notification-dropdown d-flex align-center justify-center"
@@ -112,53 +114,58 @@
                   <v-img max-height="34" max-width="34" src="@/assets/img/icons/icon-13.svg"></v-img>
                 </div>
               </template>
-              <v-list>
+              <v-list class="notification-dropdown-list">
                 <v-list-item>
                   <v-list-item-title>
-                    <router-link
-                      to="/"
-                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
-                    >
-                      <img src="@/assets/img/icons/icon-15.svg" alt />
-                      <span class="ml-3">Shaxsiy sozlamalar</span>
-                    </router-link>
+                    <h1 class="title-1 color-grey text-center font-500 mt-4 mb-5">E'lonlar</h1>
                   </v-list-item-title>
                 </v-list-item>
 
-                <v-list-item>
-                  <v-list-item-title>
-                    <router-link
-                      to="/"
-                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
-                    >
-                      <img src="@/assets/img/icons/icon-16.svg" alt />
-                      <span class="ml-3">Parolni o’zgartirish</span>
-                    </router-link>
-                  </v-list-item-title>
-                </v-list-item>
+                <div class="alert-group-wrap pl-5 pr-5">
+                  <v-alert class="custom-alert mb-6" color="#E8FFE7" prominent>
+                    <span
+                      class="alert-title color-grey d-block"
+                    >Matematikadan oliy ta’lim muassalari uchun ...</span>
 
-                <v-list-item>
-                  <v-list-item-title>
-                    <router-link
-                      to="/"
-                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
-                    >
-                      <img src="@/assets/img/icons/icon-17.svg" alt />
-                      <span class="ml-3">Tizimdan chiqish</span>
-                    </router-link>
-                  </v-list-item-title>
-                </v-list-item>
+                    <div class="alert--text mt-3">
+                      <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
+                    </div>
+
+                    <div class="alert-date d-flex align-center mt-2">
+                      <img class="mr-1" src="@/assets/img/icons/icon-19.svg" alt />
+                      <span class="color-grey font-600">11:35, 10 sentabr</span>
+                    </div>
+                  </v-alert>
+
+                  <v-alert class="custom-alert mb-6" color="#F7FAFF" prominent>
+                    <span class="alert-title color-grey d-block">Tizim yangiliklari</span>
+
+                    <div class="alert--text mt-3">
+                      <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
+                    </div>
+
+                    <div class="alert-date d-flex align-center mt-2">
+                      <img class="mr-1" src="@/assets/img/icons/icon-19.svg" alt />
+                      <span class="color-grey font-600">11:35, 10 sentabr</span>
+                    </div>
+                  </v-alert>
+
+                  <div class="read-more-notification ml-5 mr-5 mb-5">
+                    <v-btn
+                      large
+                      class="reset-text-case w-100 letter-spacing-0"
+                      depressed
+                      color="#F1F1F1"
+                    >Barchasini o’qilgan sifatida belgilash</v-btn>
+                  </div>
+                </div>
               </v-list>
             </v-menu>
 
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
-                <div class="header-tools ml-6 d-flex">
-                  <div
-                    class="auth-dropdown d-flex align-center justify-center"
-                    v-bind="attrs"
-                    v-on="on"
-                  >
+                <div class="header-tools ml-6 d-flex" v-bind="attrs" v-on="on">
+                  <div class="auth-dropdown d-flex align-center justify-center">
                     <v-img max-height="50" max-width="50" src="@/assets/img/icons/icon-14.svg"></v-img>
                   </div>
 
@@ -174,8 +181,40 @@
                 </div>
               </template>
               <v-list>
-                <v-list-item>
-                  <v-list-item-title>adw</v-list-item-title>
+                <v-list-item class="dropdown--list">
+                  <v-list-item-title>
+                    <router-link
+                      to="/"
+                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
+                    >
+                      <img src="@/assets/img/icons/icon-15.svg" alt />
+                      <span class="ml-3">Shaxsiy sozlamalar</span>
+                    </router-link>
+                  </v-list-item-title>
+                </v-list-item>
+
+                <v-list-item class="dropdown--list">
+                  <v-list-item-title>
+                    <router-link
+                      to="/"
+                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
+                    >
+                      <img src="@/assets/img/icons/icon-16.svg" alt />
+                      <span class="ml-3">Parolni o’zgartirish</span>
+                    </router-link>
+                  </v-list-item-title>
+                </v-list-item>
+
+                <v-list-item class="dropdown--list">
+                  <v-list-item-title>
+                    <router-link
+                      to="/"
+                      class="dropdown-item text-decoration-none color-dark d-flex align-center"
+                    >
+                      <img src="@/assets/img/icons/icon-17.svg" alt />
+                      <span class="ml-3">Tizimdan chiqish</span>
+                    </router-link>
+                  </v-list-item-title>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -195,6 +234,7 @@ export default {
   name: "MainLayout",
   data() {
     return {
+      closeOnContentClick: false,
       drawer: true,
       mini: true,
     };
