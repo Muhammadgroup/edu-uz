@@ -34,3 +34,39 @@
 img {
     max-width: 100%;
 }
+
+.hooper-track {
+    padding: 0 !important;
+}
+
+.subject-hooper.hooper,
+.chart-hooper.hooper {
+    outline: none !important;
+    height: auto;
+}
+
+.subject-hooper .hooper-slide,
+.chart-hooper .hooper-slide {
+    height: auto;
+}
+
+.upload-wrap .v-text-field > .v-input__control > .v-input__slot:before {
+    display: none;
+}
+
+.upload-wrap .v-file-input__text {
+    color: #fff !important;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: var(--light);
+}
+
+.upload-wrap .v-input__slot {
+    height: 24px;
+}
+
+.v-application .upload-wrap .v-input {
+    caret-color: transparent !important;
+    color: transparent !important;
+    padding: 0;
+}
