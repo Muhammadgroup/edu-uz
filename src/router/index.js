@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Auth from './modules/Auth'
+import Chat from './modules/Chat'
+import Help from './modules/Help'
 
 Vue.use(VueRouter)
 
@@ -14,7 +16,9 @@ const routes = [
             layout: 'main'
         }
     },
-    ...Auth
+    ...Auth,
+    ...Chat,
+    ...Help
     //   {
     //     path: '/about',
     //     name: 'About',
