@@ -39,15 +39,17 @@
                 </v-list-item>
               </router-link>
 
-              <v-list-item link class="drawer-anchor">
-                <v-list-item-icon>
-                  <v-img max-height="24" max-width="24" src="@/assets/img/icons/icon-7.svg"></v-img>
-                </v-list-item-icon>
+              <router-link :to="{name: 'my-courses'}" exact class="d-block text-decoration-none">
+                  <v-list-item link class="drawer-anchor">
+                      <v-list-item-icon>
+                          <v-img max-height="24" max-width="24" src="@/assets/img/icons/icon-7.svg"></v-img>
+                      </v-list-item-icon>
 
-                <v-list-item-content>
-                  <v-list-item-title>Mening kurslarim</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
+                      <v-list-item-content>
+                          <v-list-item-title>Mening kurslarim</v-list-item-title>
+                      </v-list-item-content>
+                  </v-list-item>
+              </router-link>
 
               <router-link :to="{name: 'chat'}" exact class="d-block text-decoration-none">
                 <v-list-item class="drawer-anchor">

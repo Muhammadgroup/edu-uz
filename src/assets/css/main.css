@@ -35,7 +35,7 @@ body {
 .auth-header {
     min-height: 100px;
     background: #fff;
-    box-shadow: 0px 4px 20px rgba(166, 166, 166, 0.25);
+    box-shadow: 0 4px 20px rgba(166, 166, 166, 0.25);
 }
 
 .header {
@@ -208,7 +208,7 @@ body {
 
 .header-tools {
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    box-shadow: 0 4px 4px rgba(221, 221, 221, 0.25);
     border-radius: 10px;
 }
 
@@ -226,7 +226,6 @@ body {
 .card-basic {
     background: #FFFFFF;
     border: 1px solid #F1F1F1;
-    box-sizing: border-box;
     border-radius: 3px;
     padding: 13px 19px;
     height: 100%;
@@ -322,7 +321,7 @@ body {
     max-width: 850px;
     min-height: 600px;
     background: #FFFFFF;
-    box-shadow: 0px 4px 23px rgba(221, 221, 221, 0.25);
+    box-shadow: 0 4px 23px rgba(221, 221, 221, 0.25);
     border-radius: 10px;
     margin: 65px auto 0;
     overflow: hidden;
@@ -419,7 +418,7 @@ body {
     width: 100% !important;
     background: #FFFFFF !important;
     border: 1px solid #F4F4F4 !important;
-    box-shadow: 0px 4px 4px rgba(204, 204, 204, 0.25) !important;
+    box-shadow: 0 4px 4px rgba(204, 204, 204, 0.25) !important;
     border-radius: 10px !important;
 }
 
@@ -490,7 +489,7 @@ body {
  .form-label-number .v-input__slot {
     background: #FFFFFF !important;
     border: 1px solid #F4F4F4 !important;
-    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25) !important;
+    box-shadow: 0 4px 4px rgba(170, 170, 170, 0.25) !important;
     border-radius: 11px !important;
     height: 65px;
     padding-left: 20px !important;
@@ -504,7 +503,7 @@ body {
 .app-badge {
     min-width: 38px;
     height: 30px;
-    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    box-shadow: 0 4px 4px rgba(221, 221, 221, 0.25);
     border-radius: 5px;
     font-family: var(--medium);
     color: #fff;
@@ -521,7 +520,7 @@ body {
 
 .chat-area {
     background: #fff;
-    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    box-shadow: 0 4px 4px rgba(221, 221, 221, 0.25);
     border-radius: 10px;
     display: flex;
     height: 100%;
@@ -595,7 +594,7 @@ body {
     padding: 25px;
     background: #FFFFFF;
     border: 1px solid #F4F4F4;
-    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25);
+    box-shadow: 0 4px 4px rgba(170, 170, 170, 0.25);
     border-radius: 10px;
 }
 
@@ -617,7 +616,7 @@ body {
 
 .expansion-panel-wrap .v-expansion-panel {
     margin-bottom: 15px;
-    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25);
+    box-shadow: 0 4px 4px rgba(170, 170, 170, 0.25);
     border-radius: 10px !important;
 }
 
@@ -671,6 +670,88 @@ body {
     margin: 0 !important;
 }
 
+.course-progress {
+    height: 37px
+}
+
+.course-progress-track {
+    background: #F2F2F2;
+}
+
+.progress-track {
+    height: 100%;
+    background: #83D2B7;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.courses-card {
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 4px 10px rgba(170, 170, 170, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 12px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-progress {
+    margin-top: auto;
+}
+
+.course-card-img {
+    height: 156px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+
+.course-progress-track {
+    flex: 1;
+}
+
+.course-progress-button {
+    min-width: 122px;
+}
+
+.progress-text {
+    font-size: 15px;
+    line-height: 21px;
+}
+
+.courses-card p {
+    font-family: var(--semiBold);
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+    margin-top: 8px;
+    margin-bottom: 0px !important;
+    height: 50px;
+    overflow: hidden;
+}
+
+.read-more-anchor {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.flickity-card {
+    width: 240px;
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0 4px 10px rgba(170, 170, 170, 0.3);
+    border-radius: 10px;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.flickity-card-img {
+    height: 105px;
+}
+
 /***************  MEDIA  ************************/
 
 @media (min-width: 1050px) {
@@ -693,10 +774,10 @@ body {
     }
 
     .header {
-        padding: 14px 0px 14px 20px;
+        padding: 14px 0 14px 20px;
         height: 70px;
         background: #fff;
-        box-shadow: 0px 4px 10px rgba(156, 156, 156, 0.25);
+        box-shadow: 0 4px 10px rgba(156, 156, 156, 0.25);
     }
 
     .v-application .header-search span,
@@ -786,7 +867,21 @@ body {
     .account-sidebar {
         width: 100%;
         background: transparent;
+        padding: 0;
     }
+
+    .account-sidebar-items {
+        box-shadow: 0 4px 4px rgba(217, 217, 217, 0.25) !important;
+        border-radius: 7px !important;
+        color: var(--grey) !important;
+        margin-bottom: 12.5px;
+        background: #fff;
+    }
+}
+
+.course-progress-button button {
+    font-size: 18px !important;
+    line-height: 23px;
 }
 
 @media (max-width: 650px) {

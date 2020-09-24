@@ -21,3 +21,7 @@ export function mobileMenu() {
         })
     })
 }
+
+export function mobileSidebar() {
+    const $anchors = document.querySelectorAll('[data-toggle="mobile"]');
+}

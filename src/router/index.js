@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Auth from './modules/Auth'
 import Chat from './modules/Chat'
 import Help from './modules/Help'
+import MyCourses from './modules/MyCourses'
 
 Vue.use(VueRouter)
 
@@ -18,7 +19,8 @@ const routes = [
     },
     ...Auth,
     ...Chat,
-    ...Help
+    ...Help,
+    ...MyCourses
     //   {
     //     path: '/about',
     //     name: 'About',
