@@ -70,3 +70,7 @@ img {
     color: transparent !important;
     padding: 0;
 }
+
+.subject-stars .v-rating .v-icon {
+    padding: 0 1px;
+}
