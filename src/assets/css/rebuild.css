@@ -74,3 +74,35 @@ img {
 .subject-stars .v-rating .v-icon {
     padding: 0 1px;
 }
+
+.v-pagination > li:first-child,
+.v-pagination > li:last-child {
+    display: none;
+}
+
+.v-pagination__item {
+    width: 45px !important;
+    height: 45px !important;
+    box-shadow: none !important;
+}
+
+.v-pagination {
+    justify-content: initial !important;
+}
+
+.theme--light.v-pagination .v-pagination__item {
+    outline: none;
+}
+
+.v-pagination__more {
+    color: var(--green);
+}
+
+.theme--light.v-pagination .v-pagination__item {
+    background: var(--green) !important;
+    color: #fff !important;
+}
+
+.theme--light.v-pagination .v-pagination__item--active {
+    background-color: #66c75e !important
+}

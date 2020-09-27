@@ -11,13 +11,17 @@
             <th>Davomiyligi</th>
             <th>Narxi</th>
             <th>
-              <router-link :to="{name: 'liderBoard'}" class="d-block text-decoration-none">
+              <router-link
+                :to="{ name: 'liderBoard' }"
+                class="d-block text-decoration-none"
+              >
                 <v-btn
                   depressed
                   dark
                   class="reset-text-case font-400 letter-spacing-1"
                   color="var(--pink)"
-                >Reyting doska</v-btn>
+                  >Reyting doska</v-btn
+                >
               </router-link>
             </th>
           </tr>
@@ -33,13 +37,17 @@
             <td>00:08:00</td>
             <td>Bepul</td>
             <td>
-              <router-link to="/" class="d-block text-decoration-none">
+              <router-link
+                :to="{ name: 'course-start' }"
+                class="d-block text-decoration-none"
+              >
                 <v-btn
                   depressed
                   dark
                   class="reset-text-case font-400 letter-spacing-1"
                   color="var(--green)"
-                >Boshlash</v-btn>
+                  >Boshlash</v-btn
+                >
               </router-link>
             </td>
           </tr>
@@ -54,13 +62,17 @@
             <td>00:08:00</td>
             <td>Bepul</td>
             <td>
-              <router-link to="/" class="d-block text-decoration-none">
+              <router-link
+                :to="{ name: 'course-start' }"
+                class="d-block text-decoration-none"
+              >
                 <v-btn
                   depressed
                   dark
                   class="reset-text-case font-400 letter-spacing-1"
                   color="var(--green)"
-                >Boshlash</v-btn>
+                  >Boshlash</v-btn
+                >
               </router-link>
             </td>
           </tr>

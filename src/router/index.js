@@ -6,6 +6,8 @@ import Chat from './modules/Chat'
 import Help from './modules/Help'
 import MyCourses from './modules/MyCourses'
 import Tests from './modules/Tests'
+import Library from './modules/Library'
+import CoursePayment from './modules/CoursePayment'
 
 Vue.use(VueRouter)
 
@@ -22,7 +24,9 @@ const routes = [
     ...Chat,
     ...Help,
     ...MyCourses,
-    ...Tests
+    ...Tests,
+    ...Library,
+    ...CoursePayment
     //   {
     //     path: '/about',
     //     name: 'About',

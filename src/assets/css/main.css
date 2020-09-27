@@ -946,7 +946,7 @@ body {
 
 .app-table {
     border-collapse: separate;
-    border-spacing: 0 1.5rem;
+    border-spacing: 0 1.25rem;
 }
 
 .app-table-thead th {
@@ -980,6 +980,235 @@ body {
     background: transparent;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.table-raiting-circle {
+    font-size: 22px;
+    line-height: 29px;
+    width: 50px;
+    height: 50px;
+    background: var(--green);
+    border-radius: 100%;
+    color: #fff;
+}
+
+.app-table-tbody tr td:first-child a {
+    width: 30px;
+}
+
+.payment-view {
+    max-width: 700px;
+    padding: 34px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25);
+    border-radius: 10px;
+    margin: 105px auto 0;
+}
+
+.payment-view p {
+    font-size: 40px;
+    line-height: 52px;
+    color: var(--grey);
+    font-family: var(--bold);
+}
+
+.payment-view-form p {
+    font-size: 22px;
+    line-height: 29px;
+    font-family: var(--bold);
+}
+
+.payment-card-number span {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.payment-card-input {
+    height: 65px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    outline: none;
+    padding: 20px;
+    font-size: 25px;
+    font-family: var(--semiBold);
+    color: var(--grey);
+    display: block;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.payment-card-number {
+    flex: 1;
+}
+
+.payment-card-code {
+    width: 180px;
+}
+
+.payment-card-code span {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.payment-view-form .v-input .v-label {
+    font-family: var(--bold);
+    color: #000;
+    font-size: 18px;
+}
+
+.payment-button button {
+    border-radius: 5px;
+    max-width: 356px;
+    width: 100%;
+    height: 80px !important;
+    box-shadow: none;
+    font-size: 30px !important;
+    line-height: 39px !important;
+    letter-spacing: 0;
+    font-family: var(--semiBold);
+}
+
+.confirmation-field input {
+    max-width: 360px;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.success-payment-view span {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.success-payment-text {
+    font-size: 32px;
+    line-height: 42px;
+}
+
+.has-coupon span {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.coupon-field {
+    max-width: 450px;
+    width: 100%;
+    margin: 40px auto 80px;
+}
+
+.payment-error-text {
+    color: var(--red);
+    margin-bottom: 20px;
+    display: block;
+    font-size: 16px;
+}
+
+.course-start-box {
+    max-width: 960px;
+}
+
+.course-start-header p {
+    font-size: 26px;
+    line-height: 34px;
+    color: var(--grey);
+    font-family: var(--bold);
+}
+
+.course-start-progress {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 10px;
+    height: 10px;
+    overflow: hidden;
+}
+
+.course-start-progress-track {
+    height: 100%;
+    border-radius: 120px;
+    background: var(--grey);
+}
+
+.course-start-items {
+    width: 28px;
+    height: 30px;
+    margin: 9px;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: var(--semiBold);
+    background: var(--pink);
+    border-radius: 2px;
+}
+
+.course-item-number {
+    background: #fff;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.course-start-content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 5px;
+    padding: 25px 20px;
+}
+
+.course-start-content h1 {
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.course-answer-items {
+    font-size: 20px;
+    color: #3f3f3f;
+    background: #F7F7F7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 15px 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.course-answer-items.active {
+    background: #DAF4D8;
+}
+
+.course-next-button button {
+    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25);
+    border-radius: 5px;
+    width: 200px;
+    height: 50px !important;
+    font-size: 22px !important;
+    line-height: 29px;
+    letter-spacing: 0;
+}
+
+.course-answer-items input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.course-answer-correct {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.course-answer-items input:checked + .course-answer-correct {
+    background: #DAF4D8;
+}
+
+.course-answer-items span {
+    position: relative;
+    z-index: 1;
 }
 
 /***************  MEDIA  ************************/
