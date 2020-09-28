@@ -32,6 +32,15 @@ const Tests = [
             layout: "main"
         },
         component: () => import('@/views/Tests/CourseStart')
+    },
+    {
+
+        path: '/test-result',
+        name: 'test-result',
+        meta: {
+            layout: "main"
+        },
+        component: () => import('@/views/Tests/TestResult')
     }
 ]
 

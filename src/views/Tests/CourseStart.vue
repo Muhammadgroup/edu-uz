@@ -33,28 +33,31 @@
           14/16 karsning qisqartilishidan hosil bo’lgan kasrni ...
         </h1>
 
-        <div class="course-answer-items p-relative">
+        <div
+          class="course-answer-items p-relative is-error"
+          data-toggle="selected"
+        >
           <span>Surati 8ga maxraji 16ga teng bo’ladi</span>
 
           <input type="radio" name="radio" id="answer-1" />
           <label for="answer-1" class="course-answer-correct"></label>
         </div>
 
-        <div class="course-answer-items p-relative">
+        <div class="course-answer-items p-relative" data-toggle="selected">
           <span>Surati 8ga maxraji 14ga teng bo’ladi</span>
 
           <input type="radio" name="radio" id="answer-2" />
           <label for="answer-2" class="course-answer-correct"></label>
         </div>
 
-        <div class="course-answer-items p-relative">
+        <div class="course-answer-items p-relative" data-toggle="selected">
           <span>Surati 7ga maxraji 6ga teng bo’ladi</span>
 
           <input type="radio" name="radio" id="answer-3" />
           <label for="answer-3" class="course-answer-correct"></label>
         </div>
 
-        <div class="course-answer-items p-relative">
+        <div class="course-answer-items p-relative" data-toggle="selected">
           <span>Surati 7ga maxraji 8ga teng bo’ladi</span>
 
           <input type="radio" name="radio" id="answer-4" />
@@ -63,16 +66,27 @@
       </div>
 
       <div class="course-next-button mt-5 mb-15 text-right">
-        <v-btn class="reset-text-case font-600" color="var(--pink)" large dark
-          >Keyingisi</v-btn
+        <router-link
+          :to="{ name: 'test-result' }"
+          class="d-block text-decoration-none"
         >
+          <v-btn class="reset-text-case font-600" color="var(--pink)" large dark
+            >Keyingisi</v-btn
+          >
+        </router-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import { selectedItems } from "@/utils/frontend";
+
+export default {
+  mounted() {
+    selectedItems();
+  },
+};
 </script>
 
 <style>

@@ -14,3 +14,8 @@ Vue.use(Chartkick.use(Chart))
 
 import VueMask from 'v-mask'
 Vue.use(VueMask)
+
+import VueVideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
+
+Vue.use(VueVideoPlayer)
