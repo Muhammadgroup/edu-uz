@@ -39,3 +39,18 @@ export function mobileSidebar() {
         })
     })
 }
+
+export function selectedItems() {
+    const $items = document.querySelectorAll('[data-toggle="selected"]')
+
+    $items.forEach(el => {
+        el.addEventListener('click', function () {
+
+            $items.forEach(el => {
+                el.classList.remove('active')
+            })
+
+            el.classList.add('active')
+        })
+    })
+}

@@ -9,6 +9,7 @@
 <script>
 import MainLayout from "./components/layer/MainLayout";
 import AuthLayout from "./components/layer/AuthLayout";
+import CourseLayout from "./components/layer/CourseLayout";
 
 export default {
   name: "App",
@@ -16,6 +17,7 @@ export default {
   components: {
     MainLayout,
     AuthLayout,
+    CourseLayout,
   },
 
   data: () => ({
