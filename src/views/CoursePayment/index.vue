@@ -15,6 +15,7 @@
                 class="payment-card-input"
                 type="text"
                 v-model="inputVal"
+                placeholder="XXXX XXXX XXXX XXXX"
                 v-mask="'####  ####  ####  ####'"
               />
             </div>
@@ -27,6 +28,7 @@
               <input
                 class="payment-card-input"
                 type="text"
+                placeholder="XX / XX"
                 v-model="inputVal2"
                 v-mask="'## / ##'"
               />

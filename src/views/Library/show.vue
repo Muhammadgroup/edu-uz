@@ -6,7 +6,7 @@
           <tr>
             <th></th>
             <th class="text-left">Fayl nomi</th>
-            <th>Qo’shilgan vaqti</th>
+            <th class="desktop-visible">Qo’shilgan vaqti</th>
             <th>Xajmi</th>
             <th></th>
           </tr>
@@ -17,16 +17,19 @@
               <img src="@/assets/img/icons/icon-33.svg" alt />
             </td>
             <td class="text-left">Abituriyent gazetasi 1</td>
-            <td>11.09.2020</td>
+            <td class="desktop-visible">11.09.2020</td>
             <td>34Mb</td>
             <td>
-              <router-link to="/" class="d-block text-decoration-none">
+              <router-link to="/" class="download-button d-block text-decoration-none">
                 <v-btn
                   depressed
                   dark
                   class="reset-text-case font-400"
                   color="var(--pink)"
-                >Yuklab olish</v-btn>
+                >
+                    <div class="desktop-text">Yuklab olish</div>
+                    <img class="mobile-download-icon" src="@/assets/img/icons/icon-43.svg" alt="">
+                </v-btn>
               </router-link>
             </td>
           </tr>
@@ -36,16 +39,19 @@
               <img src="@/assets/img/icons/icon-33.svg" alt />
             </td>
             <td class="text-left">Abituriyent gazetasi 1</td>
-            <td>11.09.2020</td>
+            <td class="desktop-visible">11.09.2020</td>
             <td>34Mb</td>
             <td>
-              <router-link to="/" class="d-block text-decoration-none">
+              <router-link to="/" class="download-button d-block text-decoration-none">
                 <v-btn
                   depressed
                   dark
                   class="reset-text-case font-400"
                   color="var(--pink)"
-                >Yuklab olish</v-btn>
+                >
+                    <div class="desktop-text">Yuklab olish</div>
+                    <img class="mobile-download-icon" src="@/assets/img/icons/icon-43.svg" alt="">
+                </v-btn>
               </router-link>
             </td>
           </tr>

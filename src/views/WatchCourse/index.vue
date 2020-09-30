@@ -35,6 +35,7 @@
                     <v-tab> <span>Vazifalar</span> </v-tab>
                     <v-tab> <span>Testlar</span> </v-tab>
                     <v-tab> <span>Qo’shimcha fayllar</span> </v-tab>
+                    <v-tab class="mobile-tab"> <span>Darslar</span> </v-tab>
 
                     <div class="tab-expand-tools d-flex align-center">
                       <div class="expand-tools-wrap d-flex align-center">
@@ -82,6 +83,29 @@
                   <v-tab-item class="expand-tab-items"> 12ad3 </v-tab-item>
                   <v-tab-item class="expand-tab-items"> 123www </v-tab-item>
                   <v-tab-item class="expand-tab-items"> 123www2222 </v-tab-item>
+                    <!-- Mobile uchun-->
+                  <v-tab-item class="expand-tab-items mobile-tab-item">
+                     <div class="mobile-course-wrap">
+                         <div
+                             v-for="item in 20"
+                             :key="item"
+                             class="course-content-items d-flex align-center"
+                             @click="warningModal = true"
+                         >
+                             <div
+                                 class="course-item-count d-flex align-center justify-center mr-5"
+                             >
+                                 <p class="mb-0">{{ item }}</p>
+                             </div>
+
+                             <span class="mr-2">Kasrlar ustida amallar bajarish</span>
+
+                             <div class="course-lock ml-auto">
+                                 <img src="@/assets/img/icons/icon-35.svg" alt="" />
+                             </div>
+                         </div>
+                     </div>
+                  </v-tab-item>
                 </v-tabs-items>
               </div>
             </div>
@@ -149,7 +173,14 @@ export default {
       },
     };
   },
-  components: {},
+    mounted() {
+      const $el = document.querySelector('.course-expand-tabs .v-slide-group__wrapper');
+      const $bodyWidth = document.querySelector('body').clientWidth
+
+        if($bodyWidth < 480) {
+            $el.style.width = `${$bodyWidth}px`
+        }
+    }
 };
 </script>
 
