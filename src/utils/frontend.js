@@ -24,4 +24,18 @@ export function mobileMenu() {
 
 export function mobileSidebar() {
     const $anchors = document.querySelectorAll('[data-toggle="mobile"]');
+    const $content = document.querySelector('.account-view');
+    const $close = document.querySelectorAll('[data-view="close"]')
+
+    $anchors.forEach(el => {
+        el.addEventListener('click', function () {
+            $content.classList.add('active')
+        })
+    })
+
+    $close.forEach(el => {
+        el.addEventListener('click', function () {
+            $content.classList.remove('active')
+        })
+    })
 }

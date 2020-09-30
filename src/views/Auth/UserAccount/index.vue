@@ -38,6 +38,10 @@
             </div>
 
             <div class="account-view">
+                <div class="mobile-go-back" data-view="close">
+                    <i class="mdi mdi-arrow-left"></i>
+                </div>
+
                 <router-view/>
             </div>
         </div>

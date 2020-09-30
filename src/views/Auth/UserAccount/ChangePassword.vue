@@ -1,5 +1,10 @@
 <template>
     <div class="change-password-view">
+
+<!--        <div class="mobile-go-back" data-view="close">-->
+<!--            <i class="mdi mdi-arrow-left"></i>-->
+<!--        </div>-->
+
         <div class="account-view-body mt-10">
             <div class="form-group mb-11">
                 <label for="old-password" class="form-label">

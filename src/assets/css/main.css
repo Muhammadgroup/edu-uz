@@ -752,6 +752,30 @@ body {
     height: 105px;
 }
 
+.mobile-go-back {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.mobile-go-back i {
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+.user-avatar {
+    width: 135px;
+}
+
+.user-photo-upload {
+    flex: 1
+}
+
 /***************  MEDIA  ************************/
 
 @media (min-width: 1050px) {
@@ -849,6 +873,19 @@ body {
 }
 
 @media (max-width: 769px) {
+    .mobile-go-back {
+        display: flex;
+    }
+
+    .system-language-button {
+        align-items: flex-start;
+    }
+
+    .help-view-links span, .expansion--header p, .expansion--body p {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
     .account-view {
         position: absolute;
         top: 0;
@@ -857,11 +894,18 @@ body {
         height: 100%;
         background: #f7f9fc;
         transform: translateX(-100%);
+        transition: transform 300ms;
+        padding: 0;
+    }
+
+    .account-view.active {
+        transform: translateX(0%);
     }
 
     .account-container {
         box-shadow: none;
         background: transparent;
+        margin-top: 20px;
     }
 
     .account-sidebar {
@@ -958,6 +1002,37 @@ body {
         left: initial;
         right: 5px;
     }
+
+    .card-text {
+        padding: 13px 15px;
+    }
+
+    .card-text  .title-1 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .v-application .mr-9.user-avatar {
+        margin-right: 15px !important;
+    }
+
+    .v-application--is-ltr .upload-wrap .v-text-field .v-input__append-inner {
+        display: none;
+    }
+
+    .upload-wrap {
+        padding: 6px 15px !important;
+    }
+
+    .upload-wrap .v-file-input .v-file-input__text {
+        font-size: 15px;
+    }
+
+    .upload-wrap img {
+        display: block;
+        margin-left: 5px;
+        width: 30px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -968,5 +1043,19 @@ body {
 
     .login-tabs .tab-items {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .upload-wrap img {
+        display: none;
+    }
+
+    .upload-wrap .v-file-input .v-file-input__text {
+        font-size: 14px;
+    }
+
+    .user-avatar {
+        width: 99px;
     }
 }
