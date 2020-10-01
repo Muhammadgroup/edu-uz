@@ -1,6 +1,6 @@
 <template>
   <div class="char-wrap h-100">
-    <div class="chat-area">
+    <div class="chat-area" data-chat="content">
       <div class="chat-aside">
         <div class="chat-aside-header d-flex align-center justify-center">
           <p class="mb-0">Yozishmalar</p>
@@ -8,7 +8,9 @@
 
         <div class="chat-contact-wrap">
           <router-link
-            :to="{name: 'user-chat-area'}"
+            data-id="chatID"
+            data-click="toggle"
+            :to="{ name: 'chatID', params: { id: 1 } }"
             class="contact-items text-decoration-none d-flex align-center"
           >
             <div class="contact-item-avatar mr-3">
@@ -20,7 +22,12 @@
             </div>
           </router-link>
 
-          <router-link to="/" class="contact-items text-decoration-none d-flex align-center">
+          <router-link
+            data-id="chatID"
+            data-click="toggle"
+            :to="{ name: 'chatID', params: { id: 2 } }"
+            class="contact-items text-decoration-none d-flex align-center"
+          >
             <div class="contact-item-avatar mr-3">
               <img src="@/assets/img/icons/default-avatar.svg" alt />
             </div>
@@ -38,7 +45,7 @@
         </div>
       </div>
 
-      <div class="chat-message-area">
+      <div class="chat-message-area" data-chat="view">
         <router-view />
       </div>
     </div>
@@ -46,7 +53,23 @@
 </template>
 
 <script>
-export default {};
+import { setHeight, chatViewToggle } from "@/utils/frontend";
+
+export default {
+  mounted() {
+    chatViewToggle();
+
+    const $el = document.querySelectorAll('[data-click="toggle"]');
+
+    $el.forEach((el) => {
+      el.addEventListener("click", function () {
+        setTimeout(() => {
+          setHeight();
+        }, 1000);
+      });
+    });
+  },
+};
 </script>
 
 <style>

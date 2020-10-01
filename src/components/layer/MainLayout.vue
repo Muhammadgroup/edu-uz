@@ -3,14 +3,18 @@
     <div class="app-navigation d-flex">
       <div class="app-aside">
         <v-navigation-drawer
+          fixed
+          width="300"
           data-area="sidebar"
           v-model="drawer"
           class="app-drawer"
           permanent
           floating
+          expand-on-hover
+          miniVariantWidth="117"
         >
           <div class="drawer-top">
-            <v-list-item class="px-2">
+            <v-list-item to="/" :ripple="false" class="px-2">
               <v-list-item link class="drawer-anchor">
                 <v-list-item-icon>
                   <v-img
@@ -20,7 +24,7 @@
                   ></v-img>
                 </v-list-item-icon>
 
-                <v-list-item-content>
+                <v-list-item-content class="ml-0">
                   <v-list-item-title class="brand-text color-grey"
                     >edu</v-list-item-title
                   >
@@ -34,11 +38,12 @@
               <router-link to="/" exact class="d-block text-decoration-none">
                 <v-list-item class="drawer-anchor">
                   <v-list-item-icon>
-                    <v-img
+                    <!-- <v-img
                       max-height="24"
                       max-width="24"
                       src="@/assets/img/icons/icon-6.svg"
-                    ></v-img>
+                    ></v-img> -->
+                    <i class="mdi mdi-view-dashboard"></i>
                   </v-list-item-icon>
 
                   <v-list-item-content>
@@ -178,6 +183,26 @@
                   </v-list-item-content>
                 </v-list-item>
               </router-link>
+
+              <router-link
+                :to="{ name: 'search-result' }"
+                exact
+                class="d-block text-decoration-none"
+              >
+                <v-list-item link class="drawer-anchor">
+                  <v-list-item-icon>
+                    <v-img
+                      max-height="24"
+                      max-width="24"
+                      src="@/assets/img/icons/icon-10.svg"
+                    ></v-img>
+                  </v-list-item-icon>
+
+                  <v-list-item-content>
+                    <v-list-item-title>Search Result (Test)</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </router-link>
             </v-list>
           </div>
 
@@ -234,11 +259,16 @@
                   v-bind="attrs"
                   v-on="on"
                 >
-                  <v-img
-                    max-height="34"
-                    max-width="34"
-                    src="@/assets/img/icons/icon-13.svg"
-                  ></v-img>
+                  <div class="notification-icon-wrap has-notification">
+                    <div class="icon-dot-wrap">
+                      <div class="icon-dot"></div>
+                    </div>
+                    <i class="mdi mdi-bell-outline"></i>
+                  </div>
+
+                  <div class="notification-count">
+                    <span>+2</span>
+                  </div>
                 </div>
               </template>
               <v-list class="notification-dropdown-list">
@@ -253,43 +283,65 @@
                 </v-list-item>
 
                 <div class="alert-group-wrap pl-5 pr-5">
-                  <v-alert class="custom-alert mb-6" color="#E8FFE7" prominent>
-                    <span class="alert-title color-grey d-block"
-                      >Matematikadan oliy ta’lim muassalari uchun ...</span
+                  <router-link
+                    :to="{ name: 'news' }"
+                    class="text-decoration-none"
+                  >
+                    <v-alert
+                      class="custom-alert mb-6"
+                      color="#E8FFE7"
+                      prominent
                     >
+                      <span class="alert-title color-grey d-block"
+                        >Matematikadan oliy ta’lim muassalari uchun ...</span
+                      >
 
-                    <div class="alert--text mt-3">
-                      <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
-                    </div>
+                      <div class="alert--text mt-3">
+                        <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
+                      </div>
 
-                    <div class="alert-date d-flex align-center mt-2">
-                      <img
-                        class="mr-1"
-                        src="@/assets/img/icons/icon-19.svg"
-                        alt
-                      />
-                      <span class="color-grey font-600">11:35, 10 sentabr</span>
-                    </div>
-                  </v-alert>
+                      <div class="alert-date d-flex align-center mt-2">
+                        <img
+                          class="mr-1"
+                          src="@/assets/img/icons/icon-19.svg"
+                          alt
+                        />
+                        <span class="color-grey font-600"
+                          >11:35, 10 sentabr</span
+                        >
+                      </div>
+                    </v-alert>
+                  </router-link>
 
-                  <v-alert class="custom-alert mb-6" color="#F7FAFF" prominent>
-                    <span class="alert-title color-grey d-block"
-                      >Tizim yangiliklari</span
+                  <router-link
+                    :to="{ name: 'news' }"
+                    class="text-decoration-none"
+                  >
+                    <v-alert
+                      class="custom-alert mb-6"
+                      color="#F7FAFF"
+                      prominent
                     >
+                      <span class="alert-title color-grey d-block"
+                        >Tizim yangiliklari</span
+                      >
 
-                    <div class="alert--text mt-3">
-                      <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
-                    </div>
+                      <div class="alert--text mt-3">
+                        <p>Yakshanba kuni ochiq test bo’ladi tayyorlaningla</p>
+                      </div>
 
-                    <div class="alert-date d-flex align-center mt-2">
-                      <img
-                        class="mr-1"
-                        src="@/assets/img/icons/icon-19.svg"
-                        alt
-                      />
-                      <span class="color-grey font-600">11:35, 10 sentabr</span>
-                    </div>
-                  </v-alert>
+                      <div class="alert-date d-flex align-center mt-2">
+                        <img
+                          class="mr-1"
+                          src="@/assets/img/icons/icon-19.svg"
+                          alt
+                        />
+                        <span class="color-grey font-600"
+                          >11:35, 10 sentabr</span
+                        >
+                      </div>
+                    </v-alert>
+                  </router-link>
 
                   <div class="read-more-notification ml-5 mr-5 mb-5">
                     <v-btn
@@ -331,7 +383,7 @@
                 </div>
               </template>
               <v-list>
-                <v-list-item class="dropdown--list">
+                <v-list-item class="dropdown--list pointer">
                   <v-list-item-title>
                     <router-link
                       :to="{ name: 'user-account' }"
@@ -343,7 +395,7 @@
                   </v-list-item-title>
                 </v-list-item>
 
-                <v-list-item class="dropdown--list">
+                <v-list-item class="dropdown--list pointer">
                   <v-list-item-title>
                     <router-link
                       to="/"
@@ -355,15 +407,15 @@
                   </v-list-item-title>
                 </v-list-item>
 
-                <v-list-item class="dropdown--list">
+                <v-list-item class="dropdown--list pointer">
                   <v-list-item-title>
-                    <router-link
-                      to="/"
+                    <div
+                      @click="logOut = true"
                       class="dropdown-item text-decoration-none color-dark d-flex align-center"
                     >
                       <img src="@/assets/img/icons/icon-17.svg" alt />
                       <span class="ml-3">Tizimdan chiqish</span>
-                    </router-link>
+                    </div>
                   </v-list-item-title>
                 </v-list-item>
               </v-list>
@@ -376,6 +428,34 @@
         </div>
       </main>
     </div>
+
+    <v-dialog v-model="logOut" width="600">
+      <div class="log-out-modal px-15 py-15">
+        <p class="mb-10">Tizimdan chiqmochimisiz?</p>
+
+        <div class="log-out-buttons d-flex align-center justify-space-between">
+          <v-btn
+            color="var(--grey)"
+            class="button-yes reset-text-case"
+            x-large
+            dark
+            @click="logOut = false"
+          >
+            Ha
+          </v-btn>
+
+          <v-btn
+            color="var(--pink)"
+            class="button-no reset-text-case"
+            x-large
+            dark
+            @click="logOut = false"
+          >
+            Yo'q
+          </v-btn>
+        </div>
+      </div>
+    </v-dialog>
   </div>
 </template>
 
@@ -386,6 +466,7 @@ export default {
   name: "MainLayout",
   data() {
     return {
+      logOut: false,
       closeOnContentClick: false,
       drawer: true,
       mini: true,

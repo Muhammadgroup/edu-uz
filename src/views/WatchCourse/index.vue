@@ -71,7 +71,7 @@
                   </div>
                 </v-tabs>
 
-                <v-tabs-items v-model="tab">
+                <v-tabs-items v-model="tab" data-set="height">
                   <v-tab-item class="expand-tab-items">
                     <div>
                       <div>
@@ -80,31 +80,278 @@
                       </div>
                     </div>
                   </v-tab-item>
-                  <v-tab-item class="expand-tab-items"> 12ad3 </v-tab-item>
-                  <v-tab-item class="expand-tab-items"> 123www </v-tab-item>
-                  <v-tab-item class="expand-tab-items"> 123www2222 </v-tab-item>
-                    <!-- Mobile uchun-->
+                  <v-tab-item class="expand-tab-items">
+                    <div class="test-blog-wrap">
+                      <div class="test-blog-item">
+                        <h1 class="color-grey mb-7">1. Vazifalar nomi</h1>
+
+                        <div class="test-blog-item-card">
+                          <span class="color-grey font-500 mb-3 d-block"
+                            >Vazifa uchun tarif</span
+                          >
+                          <p>
+                            Darsda berilgan ma’lumotlarni mustahkamlash
+                            maqsadida quyidagi misollarni ishlab chiqing
+                          </p>
+                        </div>
+
+                        <div class="test-blog-button mt-8">
+                          <v-btn
+                            color="var(--pink)"
+                            dark
+                            large
+                            class="reset-text-case"
+                          >
+                            Boshlash
+                          </v-btn>
+                        </div>
+                      </div>
+
+                      <div class="test-blog-item">
+                        <h1 class="color-grey mb-7">2. Vazifalar nomi</h1>
+
+                        <div class="test-blog-item-card">
+                          <span class="color-grey font-500 mb-3 d-block"
+                            >Vazifa uchun tarif</span
+                          >
+
+                          <div class="voice-wrap d-flex align-center pointer">
+                            <span class="mr-auto color-dark font-500"
+                              >Audioxabar</span
+                            >
+                            <div class="voice-icon">
+                              <img
+                                src="@/assets/img/icons/icon-45.svg"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="test-blog-button mt-8">
+                          <v-btn
+                            color="var(--pink)"
+                            dark
+                            large
+                            class="reset-text-case"
+                          >
+                            Boshlash
+                          </v-btn>
+                        </div>
+                      </div>
+                    </div>
+                  </v-tab-item>
+                  <v-tab-item class="expand-tab-items test-blog-tab">
+                    <div class="test-blog-wrap">
+                      <div class="test-blog-item">
+                        <h1 class="color-grey mb-5">
+                          Maruzan yuzasidan sinov test
+                        </h1>
+
+                        <div class="test-blog-button">
+                          <v-btn
+                            color="var(--pink)"
+                            dark
+                            large
+                            class="reset-text-case"
+                          >
+                            Boshlash
+                          </v-btn>
+                        </div>
+                      </div>
+
+                      <div class="test-blog-item">
+                        <h1 class="color-grey mb-5">
+                          Dars yuzasidan o’zlashtirish ko’rsatkichini aniqlovchi
+                          test
+                        </h1>
+
+                        <div class="test-blog-button">
+                          <v-btn
+                            color="var(--pink)"
+                            dark
+                            large
+                            class="reset-text-case"
+                          >
+                            Boshlash
+                          </v-btn>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="test-blog-start mt-5">
+                      <div class="course-start-box">
+                        <div
+                          class="course-start-header mb-2 d-flex align-center justify-space-between"
+                        >
+                          <div class="course-name">
+                            <p>Karslar bo’yicha sara testlar</p>
+                          </div>
+                          <div class="course-countdown">
+                            <p>39:59</p>
+                          </div>
+                        </div>
+
+                        <div class="course-start-body">
+                          <div class="course-start-progress">
+                            <div
+                              class="course-start-progress-track"
+                              style="width: 20%"
+                            ></div>
+                          </div>
+
+                          <div class="course-item-number d-flex flex-wrap my-3">
+                            <div
+                              class="course-start-items is-finished d-flex align-center justify-center text-white"
+                            >
+                              1
+                            </div>
+                            <div
+                              class="course-start-items active d-flex align-center justify-center text-white"
+                            >
+                              2
+                            </div>
+                            <div
+                              v-for="item in 28"
+                              :key="item"
+                              class="course-start-items d-flex align-center justify-center text-white"
+                            >
+                              {{ item + 2 }}
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="course-start-content">
+                          <h1 class="color-dark font-600 mb-6">
+                            1. 14/16 karsning qisqartilishidan hosil bo’lgan
+                            kasrni surat qismi _ ga teng bo’lib maxraji _ ga
+                            teng bo’ladi.
+                          </h1>
+                        </div>
+
+                        <div class="course-next-button mt-5 mb-15 text-right">
+                          <router-link
+                            :to="{ name: 'test-result' }"
+                            class="d-block text-decoration-none"
+                          >
+                            <v-btn
+                              class="reset-text-case font-600"
+                              color="var(--pink)"
+                              large
+                              dark
+                              >Keyingisi</v-btn
+                            >
+                          </router-link>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="test-resul-finish">
+                      <div class="test-result-view mt-10">
+                        <h1 class="title-1 mb-5">
+                          Karslar bo’yicha sara testlar
+                        </h1>
+
+                        <div class="test-result-box">
+                          <div class="test-result-content d-flex align-center">
+                            <div class="result-cirle">
+                              <v-progress-circular
+                                :rotate="-90"
+                                :size="165"
+                                :width="25"
+                                :value="value"
+                                color="#A1D9BE"
+                              >
+                                <span class="result-progress-text"
+                                  >{{ value }}%</span
+                                >
+                              </v-progress-circular>
+                            </div>
+
+                            <div class="test-result-text">
+                              <div
+                                class="teset-result-text-items d-flex align-center"
+                              >
+                                <p>To’g’ri javoblar soni:</p>
+                                <p>23ta</p>
+                              </div>
+
+                              <div
+                                class="teset-result-text-items d-flex align-center"
+                              >
+                                <p>Xato javoblar soni:</p>
+                                <p>7ta</p>
+                              </div>
+
+                              <div
+                                class="teset-result-text-items d-flex align-center"
+                              >
+                                <p>Test uchun ketgan vaqt:</p>
+                                <p>39:18</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="course-next-button mt-6 text-right">
+                            <router-link
+                              :to="{ name: 'test-result' }"
+                              class="d-block text-decoration-none"
+                            >
+                              <v-btn
+                                class="reset-text-case font-600"
+                                color="var(--pink)"
+                                large
+                                dark
+                                >Javoblarni ko’rish</v-btn
+                              >
+                            </router-link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </v-tab-item>
+                  <v-tab-item class="expand-tab-items">
+                    <div class="test-blog-wrap">
+                      <div class="test-blog-item">
+                        <h1 class="color-grey mb-5">to’plam 2020.pdf</h1>
+
+                        <div class="test-blog-button">
+                          <v-btn
+                            color="var(--grey)"
+                            dark
+                            large
+                            class="reset-text-case"
+                          >
+                            Yuklab olish
+                          </v-btn>
+                        </div>
+                      </div>
+                    </div>
+                  </v-tab-item>
+                  <!-- Mobile uchun-->
                   <v-tab-item class="expand-tab-items mobile-tab-item">
-                     <div class="mobile-course-wrap">
-                         <div
-                             v-for="item in 20"
-                             :key="item"
-                             class="course-content-items d-flex align-center"
-                             @click="warningModal = true"
-                         >
-                             <div
-                                 class="course-item-count d-flex align-center justify-center mr-5"
-                             >
-                                 <p class="mb-0">{{ item }}</p>
-                             </div>
+                    <div class="mobile-course-wrap">
+                      <div
+                        v-for="item in 20"
+                        :key="item"
+                        class="course-content-items d-flex align-center"
+                        @click="warningModal = true"
+                      >
+                        <div
+                          class="course-item-count d-flex align-center justify-center mr-5"
+                        >
+                          <p class="mb-0">{{ item }}</p>
+                        </div>
 
-                             <span class="mr-2">Kasrlar ustida amallar bajarish</span>
+                        <span class="mr-2"
+                          >Kasrlar ustida amallar bajarish</span
+                        >
 
-                             <div class="course-lock ml-auto">
-                                 <img src="@/assets/img/icons/icon-35.svg" alt="" />
-                             </div>
-                         </div>
-                     </div>
+                        <div class="course-lock ml-auto">
+                          <img src="@/assets/img/icons/icon-35.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
                   </v-tab-item>
                 </v-tabs-items>
               </div>
@@ -153,10 +400,13 @@
 </template>
 
 <script>
+import { setScrollHeight } from "@/utils/frontend";
+
 export default {
   data() {
     return {
       panel: 0,
+      value: 85,
       tab: null,
       warningModal: false,
       playerOptions: {
@@ -173,14 +423,18 @@ export default {
       },
     };
   },
-    mounted() {
-      const $el = document.querySelector('.course-expand-tabs .v-slide-group__wrapper');
-      const $bodyWidth = document.querySelector('body').clientWidth
+  mounted() {
+    const $el = document.querySelector(
+      ".course-expand-tabs .v-slide-group__wrapper"
+    );
+    const $bodyWidth = document.querySelector("body").clientWidth;
 
-        if($bodyWidth < 480) {
-            $el.style.width = `${$bodyWidth}px`
-        }
+    if ($bodyWidth < 578) {
+      $el.style.width = `${$bodyWidth}px`;
     }
+
+    setScrollHeight();
+  },
 };
 </script>
 

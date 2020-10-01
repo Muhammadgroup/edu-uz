@@ -9,6 +9,8 @@ import Tests from './modules/Tests'
 import Library from './modules/Library'
 import CoursePayment from './modules/CoursePayment'
 import WatchCourse from './modules/WatchCourse'
+import SearchResult from './modules/SearchResult'
+import News from './modules/News'
 
 Vue.use(VueRouter)
 
@@ -28,7 +30,9 @@ const routes = [
     ...Tests,
     ...Library,
     ...CoursePayment,
-    ...WatchCourse
+    ...WatchCourse,
+    ...SearchResult,
+    ...News
 ]
 
 const router = new VueRouter({

@@ -54,3 +54,43 @@ export function selectedItems() {
         })
     })
 }
+
+export function setScrollHeight() {
+    const $el = document.querySelector('[data-set="height"]');
+    const $bodyHeight = document.querySelector('body').clientHeight
+    const xCord = $el.getBoundingClientRect().top
+
+    const delta = $bodyHeight - xCord - 20;
+
+
+    $el.style.height = `${delta}px`;
+    $el.style.overflowY = 'auto';
+    $el.style.paddingRight = '20px'
+
+    console.log($bodyHeight, xCord, delta)
+}
+
+export function setHeight() {
+    const $el = document.querySelector('[data-chat="content"]');
+    const $height = $el.clientHeight;
+    const $setContent = document.querySelector('.chat-id-view');
+    const $chatFooter = document.querySelector('.chat-text-content').clientHeight;
+    const delta = $height - $chatFooter - 10;
+
+    $setContent.style.height = `${delta}px`
+    $setContent.style.overflowY = `auto`
+
+
+}
+
+export function chatViewToggle() {
+    const $items = document.querySelectorAll('[data-id="chatID"]');
+    const $chatView = document.querySelector('[data-chat="view"]')
+
+    $items.forEach(el => {
+        el.addEventListener('click', function () {
+            $chatView.classList.add('active')
+        })
+    })
+
+}

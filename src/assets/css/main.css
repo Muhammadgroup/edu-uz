@@ -130,6 +130,7 @@ body {
 .app-main {
     background: #F7F9FC;
     flex: 1;
+    padding-left: 117px;
 }
 
 .app-drawer .v-navigation-drawer__content {
@@ -202,7 +203,7 @@ body {
 }
 
 .notification-dropdown {
-    width: 60px;
+    min-width: 60px;
     height: 60px;
 }
 
@@ -524,6 +525,8 @@ body {
     border-radius: 10px;
     display: flex;
     height: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .chat-aside {
@@ -1383,6 +1386,7 @@ body {
     font-size: 16px;
     line-height: 21px;
     font-family: var(--bold);
+    flex: 1
 }
 
 .course-expand-wrap .v-expansion-panel::before {
@@ -1530,6 +1534,515 @@ body .video-js .vjs-big-play-button {
     display: none;
 }
 
+.app-drawer .v-list-item__icon i {
+    display: block;
+    font-size: 24px;
+    color: #7E7E7E;
+}
+
+.app-drawer .v-list-item__icon i::before {
+    line-height: 1;
+    display: block;
+}
+
+.router-link-active .drawer-anchor .v-list-item__icon i {
+    color: #fff;
+}
+
+.brand-text {
+    font-family: "Roboto";
+    font-size: 38px !important;
+    font-weight: 300;
+    color: var(--grey);
+}
+
+.mobile-tab {
+    display: none !important;
+}
+
+.search-result-header > p {
+    font-size: 24px;
+    line-height: 31px;
+    font-family: var(--medium);
+}
+
+.course-sort-wrap {
+    max-width: 230px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 10px;
+    padding: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.course-sort-wrap  .theme--light.v-text-field > .v-input__control > .v-input__slot:before,
+.course-sort-wrap  .theme--light.v-text-field > .v-input__control > .v-input__slot:after {
+    border-color: transparent !important;
+    display: none !important;
+}
+
+.v-application--is-ltr .course-sort-wrap  .v-text-field .v-label {
+    color: #B2B2B2;
+    font-family: var(--medium);
+}
+
+.course-sort-wrap .v-input__icon i {
+    font-size: 50px;
+}
+
+.course-sort-wrap .v-input__slot,
+.course-sort-wrap .v-input {
+    margin: 0 !important;
+}
+
+.search-result-items {
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 10px;
+    padding: 15px 30px;
+}
+
+.search-block-rating {
+    width: 190px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.search-block-text {
+    width: calc(100% - 200px);
+}
+
+.search-block-text p {
+    font-size: 22px;
+    line-height: 29px;
+}
+
+.block-raiting-text {
+    width: 40px;
+}
+
+.block-raiting-text span {
+    color: #C4C4C4;
+    font-size: 16px;
+}
+
+.block-raiting-stars span {
+    font-size: 12px;
+    color: #C4C4C4;
+}
+
+.block-raiting-stars span {
+    margin-right: 2px !important;
+}
+
+.search-result-items:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.search-result-crumbs {
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 4px 4px rgba(170, 170, 170, 0.25);
+    border-radius: 10px;
+}
+
+.search-result-crumbs .v-breadcrumbs__item {
+    font-size: 22px;
+    line-height: 29px;
+    color: #000000;
+    font-family: var(--medium);
+}
+
+.search-result-crumbs .v-breadcrumbs__divider img {
+    width: 8px;
+    display: block;
+    margin-top: 2px;
+}
+
+.notification-icon-wrap {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 11px;
+}
+
+.notification-icon-wrap i {
+    font-size: 35px;
+    color: var(--green);
+}
+
+.icon-dot-wrap {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    width: 13px;
+    height: 13px;
+    border-radius: 100%;
+    background: #fff;
+    padding: 2px;
+}
+
+.icon-dot-wrap .icon-dot {
+    width: 100%;
+    height: 100%;
+    background: var(--green);
+    border-radius: 100%;
+}
+
+.notification-count {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F8F8F8;
+    border-radius: 4px;
+    margin-right: 11px;
+}
+
+.notification-count span {
+    font-size: 14px;
+    font-family: var(--medium);
+}
+
+.has-notification i {
+    color: var(--pink);
+}
+
+.has-notification .icon-dot-wrap .icon-dot {
+    background: var(--pink)
+}
+
+.news-view-content {
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    border-radius: 10px;
+    padding: 34px 20px;
+}
+
+.news-view-content > p {
+    font-size: 24px;
+    line-height: 31px;
+    font-family: var(--medium);
+}
+
+.news-view-container {
+    padding: 0  3.653vw;
+    overflow-y: auto;
+    max-height: 55vh;
+}
+
+.news-view-container p {
+    font-size: 19px !important;
+    line-height: 30px;
+}
+
+.log-out-modal {
+    padding: 20px;
+    background: #fff;
+}
+
+.log-out-modal p {
+    font-size: 32px;
+    line-height: 42px;
+    font-family: var(--medium);
+    text-align: center;
+}
+
+.log-out-buttons button {
+    box-shadow: none;
+    height: 75px !important;
+    max-width: 170px;
+    width: 100%;
+}
+
+.log-out-buttons .button-no {
+    max-width: 253px;
+}
+
+.log-out-buttons button span {
+    font-size: 24px;
+    line-height: 31px;
+    font-family: var(--semiBold);
+}
+
+.tab-expand-header .v-tab span {
+    font-size: 20px;
+    line-height: 25px;
+    font-family: var(--medium);
+}
+
+.test-blog-item {
+    max-width: 635px;
+}
+
+.test-blog-item:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.test-blog-item h1 {
+    font-size: 26px;
+    line-height: 34px;
+    font-family: var(--bold);
+}
+
+.test-blog-item-card {
+    background: #F1F1F1;
+    border: 1px solid #DDDDDD;
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+
+.test-blog-item-card > span {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.test-blog-item-card > p {
+    font-family: var(--medium);
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.test-blog-button button {
+    box-shadow: none;
+    height: 50px !important;
+    max-width: 188px;
+    font-size: 18px !important;
+    letter-spacing: 0;
+    font-family: var(--medium);
+}
+
+.voice-wrap {
+    width: 225px;
+    padding: 8px 15px;
+    background: #F9F9F9;
+    border: 1px solid #6C8A9B;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+}
+
+.voice-icon {
+    background: #F9F9F9;
+    box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+}
+
+.test-blog-tab .test-blog-item {
+    max-width: 100%;
+}
+
+.test-blog-start .course-start-progress,
+.test-blog-start .course-item-number {
+    background: #E9E9E9;
+}
+
+.test-blog-start .course-start-items {
+    background: #C4C4C4;
+}
+
+.test-blog-start .course-start-items.active {
+    background: #7C7C7C;
+}
+
+.test-blog-start .course-start-content {
+    background: #f9f9f9;
+}
+
+.test-blog-start .course-start-items.is-finished {
+    background: var(--grey);
+}
+
+.test-blog-start .course-start-box,
+.test-resul-finish .test-result-box {
+    max-width: 100%;
+}
+
+.test-resul-finish .test-result-content {
+    background: #F9F9F9;
+    border-radius: 5px;
+}
+
+.contact-items.router-link-active {
+    background: #f9f9f9;
+}
+
+.chat-message-area {
+    width: calc(100% - 300px);
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.chat-user-id-view {
+    width: 100%;
+}
+
+.chat-text-content {
+    min-height: 70px;
+}
+
+.chat-id-view {
+    height: 0;
+}
+
+.chat-text-content {
+    background: #FCFCFC;
+    padding: 10px 15px;
+}
+
+.chat-footer-items {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.chat-footer-items i {
+    font-size: 30px;
+    color: #DCDCDC;
+}
+
+.send-comment-wrap {
+    border-radius: 100%;
+    background: #DCDCDC;
+}
+
+.send-comment-wrap i {
+    color: #fff;
+}
+
+.chat-text-field {
+    flex: 1;
+}
+
+.chat-text-field textarea {
+    display: block;
+    outline: none !important;
+    width: 100%;
+    resize: none;
+    min-height: 45px;
+    position: relative;
+    z-index: 2;
+    padding-top: 4px;
+    font-family: var(--regular);
+    color: #333;
+}
+
+.chat-text-field span {
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    transition: all 300ms;
+    color: #CACACA;
+    font-family: var(--regular);
+}
+
+.chat-text-field span.active {
+    left: 75px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.chat-id-comment {
+    max-width: 327px;
+    border: 1px solid #BEBDBD;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.chat-id-comment-date {
+    align-self: flex-end;
+    width: 50px;
+}
+
+.chat-id-comment-date span {
+    font-size: 12px;
+    line-height: 13px;
+    color: #828282;
+}
+
+.chat-meta-text {
+    width: calc(100% - 50px);
+}
+
+.chat-meta-text p {
+    font-size: 15px;
+    line-height: 21px;
+    font-family: var(--regular);
+    margin-bottom: 0 !important;
+}
+
+.chat-id-view {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 60px;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat-id-comment:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+.chat-id-view .voice-wrap {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.mobile-chat-id-meta {
+    height: 70px;
+    border-bottom: 1px solid #C7C7C7;
+    padding: 20px;
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+}
+
+.mobile-chat-back span {
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--grey);
+    font-family: var(--bold);
+}
+
+.user-id-meta-avatar {
+    width: 41px;
+    height: 41px;
+}
+
+.drawer-top .v-list-item--link:before {
+    background: transparent !important;
+    opacity: 0;
+}
+
+.drawer-top .v-list-item {
+    background: transparent !important;
+}
+
+.app-drawer.v-navigation-drawer--fixed {
+    z-index: 999;
+}
+
 /***************  MEDIA  ************************/
 
 @media (max-width: 1800px) {
@@ -1552,6 +2065,10 @@ body .video-js .vjs-big-play-button {
     .course-content-aside,
     .expand-tools-wrap .v-expansion-panel-header {
         display: none;
+    }
+
+    .mobile-tab {
+        display: flex !important;
     }
 
     .module-course-items {
@@ -1584,6 +2101,29 @@ body .video-js .vjs-big-play-button {
 @media (max-width: 1050px) {
     .mobile-menu {
         display: flex;
+    }
+
+    .v-application .drawer-top > .px-2 {
+        padding: 0 !important;
+    }
+
+    .drawer-top .drawer-anchor {
+        margin: 0 !important;
+        box-shadow: 0px 4px 4px rgba(173, 173, 173, 0.25) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .brand-text {
+        font-size: 35px !important;
+    }
+
+
+    .drawer-top .drawer-anchor .v-list-item__content {
+        flex: initial !important;
     }
 
     .courses-card-item {
@@ -1692,6 +2232,24 @@ body .video-js .vjs-big-play-button {
         display: none;
     }
 
+    .chat-text-field span {
+        top: 0;
+        left: 0;
+    }
+
+    .search-block-text p {
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .course-expand-content {
+        padding-top: 75%;
+    }
+
+    .account-container {
+        min-height: 769px;
+    }
+
     .mobile-download-icon {
         display: block;
     }
@@ -1778,6 +2336,108 @@ body .video-js .vjs-big-play-button {
 @media (max-width: 650px) {
     .subject-container > div.d-flex {
         flex-wrap: wrap;
+    }
+
+    .mobile-chat-id-meta {
+        display: flex;
+    }
+
+    .chat-aside {
+        border: none;
+        width: 100%;
+    }
+
+    .chat-message-area {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100%;
+        background: #fff;
+        transform: translateX(100%);
+    }
+
+    .chat-message-area.active {
+        transform: translateX(0%);
+    }
+
+    .chat-text-field span {
+        top: 5px;
+        font-size: 11px;
+    }
+
+    .chat-footer-items {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-footer-items i {
+        font-size: 25px;
+    }
+
+    .test-blog-item h1 {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    .tab-expand-header .v-tab span {
+        font-size: 15px;
+    }
+
+    .search-result-items {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .search-block-text {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .search-course-items-wrap {
+        height: auto !important;
+        padding: 0 !important;
+        overflow: initial !important;
+    }
+
+    .search-result-crumbs .v-breadcrumbs__item {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .search-result-crumbs {
+        padding: 0;
+    }
+
+    .log-out-buttons button {
+        height: 54px !important;
+        max-width: 107px;
+    }
+
+    .log-out-buttons button span {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    .v-application .log-out-modal.py-15 {
+        padding: 30px !important;
+    }
+
+    .log-out-modal > p {
+        font-size: 22px;
+        line-height: 29px;
+    }
+
+    .log-out-buttons .button-no {
+        max-width: 156px;
+    }
+    
+    .news-view-container p {
+        font-size: 16px !important;
+        line-height: 26px;
+    }
+
+    .v-application .news-view.mt-16 {
+        margin-top: 30px !important
     }
 
     .course-tab-box > p {
@@ -1983,8 +2643,26 @@ body .video-js .vjs-big-play-button {
 }
 
 @media (max-width: 450px) {
-    .app-drawer {
+    .app-drawer,
+    .chart-carouse-cell {
         width: 100% !important;
+    }
+
+    .notification-dropdown-list {
+        min-width: 100%;
+    }
+    
+    .chart-card > div {
+        height: 180px !important;
+        line-height: 180px !important;
+    }
+
+    .layout-route {
+        padding-top: 40px;
+    }
+
+    .carousel-cell {
+        width: 90%;
     }
 
     .test-result-content {
@@ -2084,7 +2762,7 @@ body .video-js .vjs-big-play-button {
     .close-cicrle {
         z-index: 101;
         background: transparent;
-        top: 0;
+        top: 15px;
         left: initial;
         right: 5px;
     }
@@ -2177,5 +2855,14 @@ body .video-js .vjs-big-play-button {
 
     .course-info-img {
         min-height: 225px;
+    }
+
+    .log-out-buttons {
+        flex-wrap: wrap;
+    }
+
+    .log-out-buttons button {
+        max-width: 100% !important;
+        margin-bottom: 15px;
     }
 }
